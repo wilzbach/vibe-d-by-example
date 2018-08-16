@@ -9,7 +9,8 @@ SOURCES_BUILD_ONLY=$(addsuffix .d, \
 )
 # TODO:
 #error_display web
-DFLAGS:=-de
+# remove -de until vibe.d 0.8.5 has been released
+#DFLAGS:=-de
 export DFLAGS
 
 # Override if needed
