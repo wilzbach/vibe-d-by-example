@@ -2,11 +2,7 @@ language: d
 os:
   - linux
   #- osx
-addons:
-  apt:
-    packages:
-      - libevent-dev
+
 script:
-  - sed "s/0.8.2/0.8.1/" -i $(find . -name "*.d" -type f)
   - dub build --single cors.d
   - make test
