@@ -1,7 +1,8 @@
 #!/usr/bin/env dub
 /+ dub.sdl:
 dependency "vibe-d" version="~>0.8"
-subConfiguration "vibe-d" "vibe-core"
+dependency "vibe-d:tls" version="~>0.8"
+subConfiguration "vibe-d:tls" "botan"
 +/
 import vibe.d;
 

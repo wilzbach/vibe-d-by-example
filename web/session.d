@@ -3,6 +3,8 @@
 dependency "vibe-d" version="~>0.8"
 dependency "requests" version="~>0.6.0"
 subConfiguration "requests" "vibed"
+dependency "vibe-d:tls" version="~>0.8"
+subConfiguration "vibe-d:tls" "botan"
 +/
 import vibe.d;
 
