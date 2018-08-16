@@ -10,20 +10,18 @@ class UserService {
 
     // POST /do_this
     @method(HTTPMethod.POST)
-    auto doThis(string _bar) {
-        response.writeBody("Foo");
+    auto doThis(string bar) {
+        response.writeBody("bar="~bar);
     }
 }
 
 version(unittest) {
 void main() {
-    requestHTTP("http://localhost:8080/do_this?bar=foo", (scope req) {
+    requestHTTP("http://localhost:8080/do_this?bar=bar2", (scope req) {
         req.method = HTTPMethod.POST;
-        req.bodyWriter.write("...");
     }, (scope res) {
         import std.stdio;
-        res.bodyReader.readAllUTF8.writeln;
-        //assert(res.bodyReader.readAllUTF8 == "Foo");
+        assert(res.bodyReader.readAllUTF8 == "bar=bar2");
     });
 }
 } else
