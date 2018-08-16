@@ -1,5 +1,6 @@
-
-# Created by https://www.gitignore.io/api/d
+# Binaries
+*
+!*.*
 
 ### D ###
 # Compiled Object files
@@ -28,15 +29,5 @@ docs/
 *.lst
 
 # End of https://www.gitignore.io/api/d
-
-# Binaries
-content_type
-errors
-logging
-logging_custom
-middleware_logger
-routes
-web_routes
-web_session
 
 bin/
