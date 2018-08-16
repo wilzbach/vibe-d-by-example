@@ -1,6 +1,6 @@
 #!/usr/bin/env dub
 /+ dub.sdl:
-dependency "vibe-d" version="~>0.8.2"
+dependency "vibe-d" version="~>0.8"
 subConfiguration "vibe-d" "vibe-core"
 +/
 import vibe.d;
